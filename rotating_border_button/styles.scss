@@ -2,11 +2,36 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    .container-button {
+    .container-buttons
+    {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .rounded-button:nth-child(1) {
         --bg-button: green;
         --border-color: lightgreen;
         --rotating-border-color: orange;
+        color: #fff;
+    }    
+
+    .rounded-button:nth-child(2) {
+        --bg-button: black;
+        --border-color: red;
+        --rotating-border-color: lightgreen;
+        color: bisque;
+    }
+
+    .rounded-button:nth-child(3) {
+        --bg-button: lightyellow;
+        --border-color: pink;
+        --rotating-border-color: red;
+        color: black;
+    }
+
+    .rounded-button {
         --transition-time: .4s;
         --border-radius: 1rem;
         position: relative;
@@ -16,7 +41,7 @@
         padding: 0.5rem;
     }
 
-    .container-button::before {
+    .rounded-button::before {
         content: '';
         position: absolute;
         width: calc(100% * 1.41421356237);
@@ -29,7 +54,7 @@
         z-index: -2;
     }
 
-    .container-button::after {
+    .rounded-button::after {
         content: '';
         background-color: var(--border-color);
         position: absolute;
@@ -40,8 +65,7 @@
         z-index: -1;
     }
 
-    .button {
-        color: #fff;
+    .button-content {
         background-color: var(--bg-button);
         border-radius: var(--border-radius);
         display: flex;
@@ -50,8 +74,9 @@
         font-size: 1.7rem;
         padding: 2rem 4rem;
     }
-    
-    .container-button:hover::before {
+
+    .rounded-button:hover::before {
         transform: translate(-50%, -50%) rotate(-180deg);
     }
+
 }
