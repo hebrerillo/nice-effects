@@ -1,5 +1,5 @@
 :root {
-    --header-bg : #507CD3;
+    --header-bg : #82c7ff;
 }
 
 * {
@@ -30,6 +30,7 @@ html {
 /** COMMON STYLES **/
 
 header {
+    color: #fff;
     background-color: var(--header-bg);
     padding: 4rem 0;
 }
