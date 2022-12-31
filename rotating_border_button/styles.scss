@@ -1,0 +1,63 @@
+.rotating-border-section {
+    display: flex;
+    justify-content: center;
+
+    .container-button {
+        --bg-button: green;
+        --border-color: lightgreen;
+        --rotating-border-color: orange;
+        --transition-time: .4s;
+        --border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all var(--transition-time);
+        padding: 0.5rem;
+    }
+
+    .container-button::before {
+        content: '';
+        position: absolute;
+        width: calc(100% * 1.41421356237);
+        padding-bottom: calc(100% * 1.41421356237);
+        /*This conic gradient will leave some pixels from the left part visible. The ::after pseudo-element will fix it.*/
+        background: conic-gradient(
+            var(--border-color) 0.0turn, var(--border-color) 0.5turn,
+            var(--rotating-border-color) 0.5turn, var(--rotating-border-color) 1.0turn
+            );
+
+        transition: all var(--transition-time);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -2;
+    }
+
+    .container-button::after {
+        content: '';
+        background-color: var(--border-color);
+        position: absolute;
+        /*This width is not 50% to hide the visible pixels left by the conic gradient*/
+        width: 50.4%;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .button {
+        color: #fff;
+        background-color: var(--bg-button);
+        border-radius: var(--border-radius);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        padding: 2rem 4rem;
+    }
+
+    .container-button:hover::before {
+        transform: translate(-50%, -50%) rotate(-180deg);
+    }
+}
