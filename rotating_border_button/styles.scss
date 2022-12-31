@@ -13,7 +13,6 @@
         overflow: hidden;
         border-radius: var(--border-radius);
         cursor: pointer;
-        transition: all var(--transition-time);
         padding: 0.5rem;
     }
 
@@ -51,7 +50,7 @@
         font-size: 1.7rem;
         padding: 2rem 4rem;
     }
-
+    
     .container-button:hover::before {
         transform: translate(-50%, -50%) rotate(-180deg);
     }
