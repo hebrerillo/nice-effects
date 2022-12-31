@@ -25,6 +25,7 @@
   .rotating-border-section .rounded-button {
     --transition-time: .4s;
     --border-radius: 1rem;
+    background-color: var(--border-color);
     position: relative;
     overflow: hidden;
     border-radius: var(--border-radius);
@@ -40,7 +41,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: -2; }
+    z-index: 0;
+    visibility: hidden; }
   .rotating-border-section .rounded-button::after {
     content: '';
     background-color: var(--border-color);
@@ -49,7 +51,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    z-index: -1; }
+    z-index: 0; }
   .rotating-border-section .button-content {
     background-color: var(--bg-button);
     border-radius: var(--border-radius);
@@ -57,8 +59,11 @@
     justify-content: center;
     align-items: center;
     font-size: 1.7rem;
-    padding: 2rem 4rem; }
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 3; }
   .rotating-border-section .rounded-button:hover::before {
-    transform: translate(-50%, -50%) rotate(-180deg); }
+    transform: translate(-50%, -50%) rotate(-180deg);
+    visibility: visible; }
 
 /*# sourceMappingURL=styles.css.map */
