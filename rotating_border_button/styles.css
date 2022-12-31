@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #fffff0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+.container {
+    margin-top: 10rem;
+}
+
+.container-button {
+    --bg-button: green;
+    --border-color: lightgreen;
+    --transition-time: .4s;
+    width: 18rem;
+    height: 6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all var(--transition-time);
+}
+
+.container-button::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: conic-gradient(
+        var(--border-color) 0.0turn, var(--border-color) 0.5turn,
+        orange 0.5turn, orange 1.0turn
+        );
+    transition: all var(--transition-time);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.container-button::after {
+    content: '';
+    background-color: var(--border-color);
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.button {
+    background-color: var(--bg-button);
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+}
+
+.container-button:hover::before {
+    transform: translate(-50%, -50%) rotate(-180deg);
+}
