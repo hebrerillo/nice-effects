@@ -1,14 +1,19 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
 html {
-    font-size: 62.5%;
-}
+  font-size: 62.5%; }
+
+.heading-2 {
+  text-transform: uppercase; }
 
 section {
-    padding-top: 5rem;
-}
+  padding-top: 5rem; }
+  section .title-section {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem; }
 
+/*# sourceMappingURL=general.css.map */

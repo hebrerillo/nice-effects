@@ -1,6 +1,7 @@
 .rotating-border-section {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .container-button {
         --bg-button: green;
