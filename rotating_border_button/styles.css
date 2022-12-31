@@ -12,7 +12,6 @@
     overflow: hidden;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: all var(--transition-time);
     padding: 0.5rem; }
   .rotating-border-section .container-button::before {
     content: '';
