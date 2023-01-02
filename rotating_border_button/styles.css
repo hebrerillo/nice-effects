@@ -13,10 +13,10 @@
     --rotating-border-color: orange;
     color: #fff; }
   .rotating-border-section .rounded-button:nth-child(2) {
-    --bg-button: black;
-    --border-color: red;
-    --rotating-border-color: lightgreen;
-    color: bisque; }
+    --bg-button: brown;
+    --border-color: green;
+    --rotating-border-color: salmon;
+    color: white; }
   .rotating-border-section .rounded-button:nth-child(3) {
     --bg-button: lightyellow;
     --border-color: pink;
