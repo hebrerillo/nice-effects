@@ -1,0 +1,31 @@
+.horizontal-accordion-section {
+  --items-width: 20rem; }
+  .horizontal-accordion-section .container {
+    margin: 0 auto;
+    width: 80rem;
+    display: flex;
+    justify-content: flex-start;
+    visibility: hidden; }
+    .horizontal-accordion-section .container .items-container {
+      display: flex;
+      position: relative;
+      column-gap: 2rem;
+      width: var(--items-width); }
+    .horizontal-accordion-section .container .items-container:hover {
+      width: auto; }
+    .horizontal-accordion-section .container .items-container:hover .item {
+      transform: translateX(0) !important; }
+    .horizontal-accordion-section .container .item:nth-child(1) {
+      background-color: salmon; }
+    .horizontal-accordion-section .container .item:nth-child(2) {
+      background-color: lightgray; }
+    .horizontal-accordion-section .container .item:nth-child(3) {
+      background-color: lightpink; }
+    .horizontal-accordion-section .container .item {
+      width: var(--items-width);
+      height: 10rem;
+      transition: all var(--transition-time);
+      flex-shrink: 0;
+      transition: 2s all; }
+
+/*# sourceMappingURL=styles.css.map */

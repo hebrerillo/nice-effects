@@ -1,0 +1,45 @@
+.horizontal-accordion-section {
+    --items-width: 20rem;
+    .container {
+        margin: 0 auto;
+        width: 80rem;
+        display: flex;
+        justify-content: flex-start;
+        visibility: hidden;
+
+        .items-container {
+            display: flex;
+            position: relative;
+            column-gap: 2rem;
+            width: var(--items-width);
+        }
+
+        .items-container:hover {
+            width: auto;
+        }
+
+        .items-container:hover .item{
+            transform: translateX(0) !important;
+        }
+
+        .item:nth-child(1) {
+            background-color: salmon;
+        }
+
+        .item:nth-child(2) {
+            background-color: lightgray;
+        }
+
+        .item:nth-child(3) {
+            background-color: lightpink;
+        }
+
+        .item {
+            width: var(--items-width);
+            height: 10rem;
+            transition: all var(--transition-time);
+            flex-shrink: 0;
+            transition: 2s all;
+        }
+    }
+}
