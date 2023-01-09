@@ -23,8 +23,9 @@
                 border-radius: 5px;
                 overflow: none;
                 background-clip: border-box;
-                border: 1px solid lightgray;
                 transition: 1s all;
+                box-shadow: 0 0 0.6rem 0.2rem rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
 
                 a {
                     display: block;
@@ -87,7 +88,7 @@
             .item:nth-child(1) a::before {
                 background-image: url('img/madrid.jpg');
             }
-
+            
             .item:nth-child(2) a::before {
                 background-image: url('img/vienna.jpg');
             }
