@@ -24,6 +24,25 @@
         background-clip: border-box;
         border: 1px solid lightgray;
         transition: 1s all; }
+        .horizontal-accordion-section .container .items-container .item a {
+          display: block;
+          overflow: hidden;
+          width: 100%;
+          height: 80%;
+          position: relative; }
+        .horizontal-accordion-section .container .items-container .item a::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-position: center center;
+          background-size: cover;
+          transition: all 0.3s; }
+        .horizontal-accordion-section .container .items-container .item a:hover::before {
+          transform: scale(1.15); }
         .horizontal-accordion-section .container .items-container .item button {
           text-transform: uppercase;
           padding: 1rem 3rem;
@@ -46,20 +65,13 @@
       .horizontal-accordion-section .container .items-container .static-item {
         visibility: hidden;
         z-index: -1; }
-      .horizontal-accordion-section .container .items-container .item::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 80%;
-        background-position: center center;
-        background-size: cover; }
-      .horizontal-accordion-section .container .items-container .item:nth-child(1)::before {
+      .horizontal-accordion-section .container .items-container .item:nth-child(1) a::before {
         background-image: url("img/madrid.jpg"); }
-      .horizontal-accordion-section .container .items-container .item:nth-child(2)::before {
+      .horizontal-accordion-section .container .items-container .item:nth-child(2) a::before {
         background-image: url("img/vienna.jpg"); }
-      .horizontal-accordion-section .container .items-container .item:nth-child(3)::before {
+      .horizontal-accordion-section .container .items-container .item:nth-child(3) a::before {
         background-image: url("img/rome.jpg"); }
-      .horizontal-accordion-section .container .items-container .item:nth-child(4)::before {
+      .horizontal-accordion-section .container .items-container .item:nth-child(4) a::before {
         background-image: url("img/newyork.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */
