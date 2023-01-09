@@ -8,25 +8,58 @@
       position: relative;
       column-gap: 1rem;
       justify-content: space-between;
-      height: 28rem; }
-      .horizontal-accordion-section .container .items-container .item:nth-child(1) {
-        background-color: salmon; }
-      .horizontal-accordion-section .container .items-container .item:nth-child(2) {
-        background-color: lightgray; }
-      .horizontal-accordion-section .container .items-container .item:nth-child(3) {
-        background-color: lightpink; }
-      .horizontal-accordion-section .container .items-container .item:nth-child(4) {
-        background-color: brown; }
+      height: 29rem; }
       .horizontal-accordion-section .container .items-container .item {
-        transition: 2s all;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
         position: absolute;
         left: 0;
-        top: 0; }
+        top: 0;
+        background-color: #fff;
+        border-radius: 5px;
+        overflow: none;
+        background-clip: border-box;
+        border: 1px solid lightgray;
+        transition: 1s all; }
+        .horizontal-accordion-section .container .items-container .item button {
+          text-transform: uppercase;
+          padding: 1rem 3rem;
+          background-color: #0095ff;
+          color: #eee;
+          font-weight: 700;
+          border-radius: 3px;
+          outline: none;
+          cursor: pointer;
+          border: 1px solid transparent;
+          box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset; }
+        .horizontal-accordion-section .container .items-container .item button:hover {
+          background-color: #07c; }
+        .horizontal-accordion-section .container .items-container .item button:active {
+          background-color: #0064bd;
+          box-shadow: none; }
       .horizontal-accordion-section .container .items-container .static-item, .horizontal-accordion-section .container .items-container .item {
         width: var(--items-width);
         height: 100%; }
       .horizontal-accordion-section .container .items-container .static-item {
         visibility: hidden;
         z-index: -1; }
+      .horizontal-accordion-section .container .items-container .item::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 80%;
+        background-position: center center;
+        background-size: cover; }
+      .horizontal-accordion-section .container .items-container .item:nth-child(1)::before {
+        background-image: url("img/madrid.jpg"); }
+      .horizontal-accordion-section .container .items-container .item:nth-child(2)::before {
+        background-image: url("img/vienna.jpg"); }
+      .horizontal-accordion-section .container .items-container .item:nth-child(3)::before {
+        background-image: url("img/rome.jpg"); }
+      .horizontal-accordion-section .container .items-container .item:nth-child(4)::before {
+        background-image: url("img/newyork.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */
