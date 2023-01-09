@@ -1,18 +1,29 @@
 'use strict';
 
-(function()
+(function ()
 {
-const container = document.querySelector('.items-container');
-const items = container.querySelectorAll('.item');
+    const $itemsContainer = $('.items-container');
+    const $items = $itemsContainer.find('.item');
 
-items.forEach((item, index) => 
-{
-    item.style.transition = 'none';
-    item.style.transform = 'translateX(-' + item.offsetLeft + 'px)';
-    item.offsetHeight;
-    item.style.transition = '';
-    item.style.zIndex = items.length - index;
-});
+    $items.each((index, item) =>
+    {
+        $(item).css('z-index', $items.length - index);
+        $itemsContainer.append($('<div class="static-item"></div>'));
+    });
 
-container.style.visibility = 'visible';
+    const $staticItems = $itemsContainer.find('.static-item');
+    $itemsContainer.mouseleave(() =>
+    {
+        $items.each((_, item) =>
+        {
+            $(item).css('transform', 'translateX(0)');
+        });
+    });
+
+    $($items[0]).mouseenter(() => {
+        $items.each((index, item)=>{
+            const newCoordinate = $staticItems[index].offsetLeft;
+            $(item).css('transform', 'translateX(' + newCoordinate + 'px)');
+        });
+    });
 })();

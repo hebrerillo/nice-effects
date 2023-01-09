@@ -1,43 +1,48 @@
 .horizontal-accordion-section {
-    --items-width: 20rem;
+    --items-width: 21rem;
     .container {
         margin: 0 auto;
-        width: 80rem;
-        visibility: hidden;
+        width: 100rem;
 
         .items-container {
             display: flex;
             position: relative;
-            column-gap: 2rem;
-            width: var(--items-width);
-        }
+            column-gap: 1rem;
+            justify-content: space-between;
+            height: 28rem;
 
-        .items-container:hover {
-            width: auto;
-        }
+            .item:nth-child(1) {
+                background-color: salmon;
+            }
 
-        .items-container:hover .item{
-            transform: translateX(0) !important;
-        }
+            .item:nth-child(2) {
+                background-color: lightgray;
+            }
 
-        .item:nth-child(1) {
-            background-color: salmon;
-        }
+            .item:nth-child(3) {
+                background-color: lightpink;
+            }
 
-        .item:nth-child(2) {
-            background-color: lightgray;
-        }
+            .item:nth-child(4) {
+                background-color: brown;
+            }
 
-        .item:nth-child(3) {
-            background-color: lightpink;
-        }
+            .item {
+                transition: 2s all;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            
+            .static-item, .item {
+                width: var(--items-width);
+                height: 100%;
+            }
 
-        .item {
-            width: var(--items-width);
-            height: 10rem;
-            transition: all var(--transition-time);
-            flex-shrink: 0;
-            transition: 2s all;
+            .static-item {
+                visibility: hidden;
+                z-index: -1;
+            }
         }
     }
 }
