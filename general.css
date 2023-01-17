@@ -9,6 +9,9 @@
 html {
   font-size: 62.5%; }
 
+a {
+  text-decoration: none; }
+
 /* TYPOGRAPHY */
 .heading-1, .heading-2 {
   text-transform: uppercase;
